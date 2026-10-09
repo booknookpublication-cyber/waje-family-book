@@ -32,7 +32,7 @@ for(let n=1;n<=TOTAL;n++){
   p.className='page'+((n===1||n===TOTAL)?' page-cover':'');
   p.dataset.density=(n===1||n===TOTAL)?'hard':'soft';
   const im=document.createElement('img');
-  im.src='pages/'+String(n).padStart(3,'0')+'.jpg'; im.alt='Page '+n; im.loading=n<5?'eager':'lazy'; im.draggable=false;
+  im.src='+String(n).padStart(3,'0')+'.jpg'; im.alt='Page '+n; im.loading=n<5?'eager':'lazy'; im.draggable=false;
   p.appendChild(im); bookEl.appendChild(p);
 }
 const pf=new St.PageFlip(bookEl,{
